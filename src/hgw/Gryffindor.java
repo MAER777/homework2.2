@@ -54,11 +54,37 @@ public class Gryffindor extends Student {
 
     public String FindTheBest(Gryffindor name1, Gryffindor name2) {
         if (name1.FullScore() < name2.FullScore()) {
-            return "Лучший ученик на курсе Грифиндор: " + name2.getName() + " " + name2.getSurName();
+            return "Лучший ученик на курсе Грифиндор: " + name2.getName() + " " + name2.getSurName() + ", чем " + name1.getName() + " " + name1.getSurName();
         } else {
-            return "Лучший ученик на курсе Грифиндор: " + name1.getName() + " " + name1.getSurName();
+            return "Лучший ученик на курсе Грифиндор: " + name1.getName() + " " + name1.getSurName() + ", чем " + name2.getName() + " " + name2.getSurName();
         }
     }
+
+    public int FullScoreMagic() {
+        int full = this.getMagicPower() + this.getTransgressPower();
+        return full;
+    }
+    public String findTheBestPowerGryffandRaven (Gryffindor name1, Ravenclaw name2) {
+        if (name1.FullScoreMagic() < name2.FullScoreMagic()) {
+            return "Ученик: " + name2.getName() + " " + name2.getSurName() + ", обладает большей мощностью магии, чем " + name1.getName() + " " + name1.getSurName();
+        } else {
+            return "Ученик: " + name1.getName() + " " + name1.getSurName() + ", обладает большей мощностью магии, чем " + name2.getName() + " " + name2.getSurName();
+        }
+    }
+    public String findTheBestPowerGryffandHuff (Gryffindor name1, Hufflepuff name2) {
+        if (name1.FullScoreMagic() < name2.FullScoreMagic()) {
+            return "Ученик: " + name2.getName() + " " + name2.getSurName() + ", обладает большей мощностью магии, чем " + name1.getName() + " " + name1.getSurName();
+        } else {
+            return "Ученик: " + name1.getName() + " " + name1.getSurName() + ", обладает большей мощностью магии, чем " + name2.getName() + " " + name2.getSurName();
+        }
+    }
+
+    public String findTheBestPowerGryffandSlyth (Gryffindor name1, Slytherin name2) {
+        if (name1.FullScoreMagic() < name2.FullScoreMagic()) {
+            return "Ученик: " + name2.getName() + " " + name2.getSurName() + ", обладает большей мощностью магии, чем " + name1.getName() + " " + name1.getSurName();
+        } else {
+            return "Ученик: " + name1.getName() + " " + name1.getSurName() + ", обладает большей мощностью магии, чем " + name2.getName() + " " + name2.getSurName();
+        }
+    }
+
 }
-
-

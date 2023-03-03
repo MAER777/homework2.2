@@ -51,4 +51,38 @@ public class Ravenclaw  extends Student{
                 + getMind() + " Мудрость " + getWisdom() + " Острота ума " + getWit() + " Творчество "
                 + getCreativity() + ".";
     }
+
+    public int FullScore () {
+        int full = this.getMagicPower() + this.getTransgressPower() + this.getMind() + this.getWisdom() + this.getWit()+ getCreativity();
+        return full;
+    }
+
+
+    public String FindTheBest(Ravenclaw name1, Ravenclaw name2) {
+        if (name1.FullScore() < name2.FullScore()) {
+            return "Лучший ученик на курсе Когтевран: " + name2.getName() + " " + name2.getSurName() + ", чем " + name1.getName() + " " + name1.getSurName();
+        } else {
+            return "Лучший ученик на курсе Когтевран: " + name1.getName() + " " + name1.getSurName() + ", чем " + name2.getName() + " " + name2.getSurName();
+        }
+    }
+
+    public int FullScoreMagic() {
+        int full = this.getMagicPower() + this.getTransgressPower();
+        return full;
+    }
+
+    public String findTheBestPowerRaveandHuff(Ravenclaw name1, Hufflepuff name2) {
+        if (name1.FullScoreMagic() < name2.FullScoreMagic()) {
+            return "Ученик: " + name2.getName() + " " + name2.getSurName() + ", обладает большей мощностью магии, чем " + name1.getName() + " " + name1.getSurName();
+        } else {
+            return "Ученик: " + name1.getName() + " " + name1.getSurName() + ", обладает большей мощностью магии, чем " + name2.getName() + " " + name2.getSurName();
+        }
+    }
+    public String findTheBestPowerRaveandSlyth(Ravenclaw name1, Slytherin name2) {
+        if (name1.FullScoreMagic() < name2.FullScoreMagic()) {
+            return "Ученик: " + name2.getName() + " " + name2.getSurName() + ", обладает большей мощностью магии, чем " + name1.getName() + " " + name1.getSurName();
+        } else {
+            return "Ученик: " + name1.getName() + " " + name1.getSurName() + ", обладает большей мощностью магии, чем " + name2.getName() + " " + name2.getSurName();
+        }
+    }
 }

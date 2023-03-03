@@ -6,29 +6,12 @@ public class Main {
     }
 
     public static void task() {
-//        Student garry = new Student ("Гарри", "Поттер", 100, 20);
-//        Student germiona = new Student("Гермиона", "Грейнджер", 56, 90);
-//        Student ron = new Student("Рон", "Уизли", 2, 100);
-//
-//        Student drako = new Student("Драко", "Малфой", 88, 23);
-//        Student graham = new Student("Грэхэм", "Монтегю", 11, 95);
-//        Student gregory = new Student("Грегори", "Гойл", 60, 30);
-//
-//        Student zahary = new Student("Захария", "Смит", 80, 12);
-//        Student sedrick = new Student("Седрик", "Диггори", 70, 22);
-//        Student djastin = new Student("Джастин", "Финч-Флетчли", 33, 11);
-//
-//        Student joy = new Student("Чжоу", "Чанг", 89, 54);
-//        Student padma = new Student("Падма", "Патил", 45, 53);
-//        Student markus = new Student("Маркус", "Белби", 87, 88);
-
 
         Gryffindor garry = new Gryffindor("Гарри", "Поттер", 100, 20, 2, 3, 4);
         Gryffindor germiona = new Gryffindor("Гермиона", "Грейнджер", 56, 90, 4,2,6);
         Gryffindor ron = new Gryffindor("Рон", "Уизли", 2, 100,1,6,4);
 
 
-//        System.out.println("garry.toString() = " + garry.toString());
         System.out.println("garry = " + garry);
         System.out.println("germiona = " + germiona);
         System.out.println("ron = " + ron);
@@ -63,5 +46,21 @@ public class Main {
 
         System.out.println("garry.FullScore() = " + garry.FullScore());
         System.out.println("garry.FindTheBest(garry, germiona) = " + garry.FindTheBest(garry, germiona));
+        System.out.println();
+
+        System.out.println("drako.FullScore() = " + drako.FullScore());
+        System.out.println("drako.FindTheBest(drako,graham) = " + drako.FindTheBest(drako, graham));
+        System.out.println();
+
+        System.out.println("joy.FullScore() = " + joy.FullScore());
+        System.out.println("joy.FindTheBest(joy,padma) = " + joy.FindTheBest(joy, padma));
+        System.out.println();
+
+        System.out.println("zahary.FullScore() = " + zahary.FullScore());
+        System.out.println("zahary.FindTheBest(zahary,sedrik) = " + zahary.FindTheBest(zahary, sedrik));
+
+        System.out.println("garry.findTheBestPowerGryffandRaven(garry,joy) = " + garry.findTheBestPowerGryffandRaven(garry, joy));
+
     }
+
 }
